@@ -1,0 +1,397 @@
+Archive member included because of file (symbol)
+
+d:/my world/nti material/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+                              d:/my world/nti material/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o (exit)
+d:/my world/nti material/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+                              ./HAL/switch/Switch_Config.o (__do_copy_data)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+text             0x00000000         0x00020000         xr
+data             0x00800060         0x0000ffa0         rw !x
+eeprom           0x00810000         0x00010000         rw !x
+fuse             0x00820000         0x00000400         rw !x
+lock             0x00830000         0x00000400         rw !x
+signature        0x00840000         0x00000400         rw !x
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD d:/my world/nti material/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+LOAD ./MCAL/DIO/DIO_Program.o
+LOAD ./HAL/switch/Switch_Config.o
+LOAD ./HAL/switch/Switch_Program.o
+LOAD ./APP/main.o
+LOAD d:/my world/nti material/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
+LOAD d:/my world/nti material/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a
+LOAD d:/my world/nti material/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
+
+.hash
+ *(.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text)
+ *(.rel.text.*)
+ *(.rel.gnu.linkonce.t*)
+
+.rela.text
+ *(.rela.text)
+ *(.rela.text.*)
+ *(.rela.gnu.linkonce.t*)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata)
+ *(.rel.rodata.*)
+ *(.rel.gnu.linkonce.r*)
+
+.rela.rodata
+ *(.rela.rodata)
+ *(.rela.rodata.*)
+ *(.rela.gnu.linkonce.r*)
+
+.rel.data
+ *(.rel.data)
+ *(.rel.data.*)
+ *(.rel.gnu.linkonce.d*)
+
+.rela.data
+ *(.rela.data)
+ *(.rela.data.*)
+ *(.rela.gnu.linkonce.d*)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.text           0x00000000      0xb0a
+ *(.vectors)
+ .vectors       0x00000000       0x54 d:/my world/nti material/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+                0x00000000                __vectors
+                0x00000000                __vector_default
+ *(.vectors)
+ *(.progmem.gcc*)
+ *(.progmem*)
+                0x00000054                . = ALIGN (0x2)
+                0x00000054                __trampolines_start = .
+ *(.trampolines)
+ .trampolines   0x00000054        0x0 linker stubs
+ *(.trampolines*)
+                0x00000054                __trampolines_end = .
+ *(.jumptables)
+ *(.jumptables*)
+ *(.lowtext)
+ *(.lowtext*)
+                0x00000054                __ctors_start = .
+ *(.ctors)
+                0x00000054                __ctors_end = .
+                0x00000054                __dtors_start = .
+ *(.dtors)
+                0x00000054                __dtors_end = .
+ SORT(*)(.ctors)
+ SORT(*)(.dtors)
+ *(.init0)
+ .init0         0x00000054        0x0 d:/my world/nti material/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+                0x00000054                __init
+ *(.init0)
+ *(.init1)
+ *(.init1)
+ *(.init2)
+ .init2         0x00000054        0xc d:/my world/nti material/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+ *(.init2)
+ *(.init3)
+ *(.init3)
+ *(.init4)
+ .init4         0x00000060       0x16 d:/my world/nti material/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+                0x00000060                __do_copy_data
+ *(.init4)
+ *(.init5)
+ *(.init5)
+ *(.init6)
+ *(.init6)
+ *(.init7)
+ *(.init7)
+ *(.init8)
+ *(.init8)
+ *(.init9)
+ .init9         0x00000076        0x8 d:/my world/nti material/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+ *(.init9)
+ *(.text)
+ .text          0x0000007e        0x4 d:/my world/nti material/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+                0x0000007e                __vector_1
+                0x0000007e                __vector_12
+                0x0000007e                __bad_interrupt
+                0x0000007e                __vector_6
+                0x0000007e                __vector_3
+                0x0000007e                __vector_11
+                0x0000007e                __vector_13
+                0x0000007e                __vector_17
+                0x0000007e                __vector_19
+                0x0000007e                __vector_7
+                0x0000007e                __vector_5
+                0x0000007e                __vector_4
+                0x0000007e                __vector_9
+                0x0000007e                __vector_2
+                0x0000007e                __vector_15
+                0x0000007e                __vector_8
+                0x0000007e                __vector_14
+                0x0000007e                __vector_10
+                0x0000007e                __vector_16
+                0x0000007e                __vector_18
+                0x0000007e                __vector_20
+ .text          0x00000082        0x0 ./MCAL/DIO/DIO_Program.o
+ .text          0x00000082        0x0 ./HAL/switch/Switch_Config.o
+ .text          0x00000082        0x0 ./HAL/switch/Switch_Program.o
+ .text          0x00000082        0x0 ./APP/main.o
+ .text          0x00000082        0x0 d:/my world/nti material/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .text          0x00000082        0x0 d:/my world/nti material/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+                0x00000082                . = ALIGN (0x2)
+ *(.text.*)
+ .text.DIO_enuInit
+                0x00000082       0x52 ./MCAL/DIO/DIO_Program.o
+                0x00000082                DIO_enuInit
+ .text.DIO_enuSetPortDirection
+                0x000000d4       0x9a ./MCAL/DIO/DIO_Program.o
+                0x000000d4                DIO_enuSetPortDirection
+ .text.DIO_enuSetPortValue
+                0x0000016e       0x9a ./MCAL/DIO/DIO_Program.o
+                0x0000016e                DIO_enuSetPortValue
+ .text.DIO_enuTogglePortValue
+                0x00000208       0xae ./MCAL/DIO/DIO_Program.o
+                0x00000208                DIO_enuTogglePortValue
+ .text.DIO_enuGetPortValue
+                0x000002b6       0xbe ./MCAL/DIO/DIO_Program.o
+                0x000002b6                DIO_enuGetPortValue
+ .text.DIO_enuSetPinDirection
+                0x00000374      0x1d8 ./MCAL/DIO/DIO_Program.o
+                0x00000374                DIO_enuSetPinDirection
+ .text.DIO_enuSetPinValue
+                0x0000054c      0x1d8 ./MCAL/DIO/DIO_Program.o
+                0x0000054c                DIO_enuSetPinValue
+ .text.DIO_enuToggelPinValue
+                0x00000724      0x11c ./MCAL/DIO/DIO_Program.o
+                0x00000724                DIO_enuToggelPinValue
+ .text.DIO_enuGetPinValue
+                0x00000840      0x13c ./MCAL/DIO/DIO_Program.o
+                0x00000840                DIO_enuGetPinValue
+ .text.SW_enuInit
+                0x0000097c       0xea ./HAL/switch/Switch_Program.o
+                0x0000097c                SW_enuInit
+ .text.SW_enuGetState
+                0x00000a66       0x5a ./HAL/switch/Switch_Program.o
+                0x00000a66                SW_enuGetState
+ .text.main     0x00000ac0       0x46 ./APP/main.o
+                0x00000ac0                main
+ .text.libgcc   0x00000b06        0x0 d:/my world/nti material/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .text.libgcc   0x00000b06        0x0 d:/my world/nti material/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+                0x00000b06                . = ALIGN (0x2)
+ *(.fini9)
+ .fini9         0x00000b06        0x0 d:/my world/nti material/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+                0x00000b06                exit
+                0x00000b06                _exit
+ *(.fini9)
+ *(.fini8)
+ *(.fini8)
+ *(.fini7)
+ *(.fini7)
+ *(.fini6)
+ *(.fini6)
+ *(.fini5)
+ *(.fini5)
+ *(.fini4)
+ *(.fini4)
+ *(.fini3)
+ *(.fini3)
+ *(.fini2)
+ *(.fini2)
+ *(.fini1)
+ *(.fini1)
+ *(.fini0)
+ .fini0         0x00000b06        0x4 d:/my world/nti material/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ *(.fini0)
+                0x00000b0a                _etext = .
+
+.data           0x00800060        0xa load address 0x00000b0a
+                0x00800060                PROVIDE (__data_start, .)
+ *(.data)
+ .data          0x00800060        0x0 d:/my world/nti material/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+ .data          0x00800060        0x0 ./MCAL/DIO/DIO_Program.o
+ .data          0x00800060        0x0 ./HAL/switch/Switch_Config.o
+ .data          0x00800060        0x0 ./HAL/switch/Switch_Program.o
+ .data          0x00800060        0x0 ./APP/main.o
+ .data          0x00800060        0x0 d:/my world/nti material/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .data          0x00800060        0x0 d:/my world/nti material/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+ *(.data*)
+ .data.SW_AstrSwState
+                0x00800060        0x9 ./HAL/switch/Switch_Config.o
+                0x00800060                SW_AstrSwState
+ *(.rodata)
+ *(.rodata*)
+ *(.gnu.linkonce.d*)
+                0x0080006a                . = ALIGN (0x2)
+ *fill*         0x00800069        0x1 00
+                0x0080006a                _edata = .
+                0x0080006a                PROVIDE (__data_end, .)
+
+.bss            0x0080006a        0x0
+                0x0080006a                PROVIDE (__bss_start, .)
+ *(.bss)
+ .bss           0x0080006a        0x0 d:/my world/nti material/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+ .bss           0x0080006a        0x0 ./MCAL/DIO/DIO_Program.o
+ .bss           0x0080006a        0x0 ./HAL/switch/Switch_Config.o
+ .bss           0x0080006a        0x0 ./HAL/switch/Switch_Program.o
+ .bss           0x0080006a        0x0 ./APP/main.o
+ .bss           0x0080006a        0x0 d:/my world/nti material/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .bss           0x0080006a        0x0 d:/my world/nti material/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+ *(.bss*)
+ *(COMMON)
+                0x0080006a                PROVIDE (__bss_end, .)
+                0x00000b0a                __data_load_start = LOADADDR (.data)
+                0x00000b14                __data_load_end = (__data_load_start + SIZEOF (.data))
+
+.noinit         0x0080006a        0x0
+                0x0080006a                PROVIDE (__noinit_start, .)
+ *(.noinit*)
+                0x0080006a                PROVIDE (__noinit_end, .)
+                0x0080006a                _end = .
+                0x0080006a                PROVIDE (__heap_start, .)
+
+.eeprom         0x00810000        0x0
+ *(.eeprom*)
+                0x00810000                __eeprom_end = .
+
+.fuse
+ *(.fuse)
+ *(.lfuse)
+ *(.hfuse)
+ *(.efuse)
+
+.lock
+ *(.lock*)
+
+.signature
+ *(.signature*)
+
+.stab           0x00000000     0x11ac
+ *(.stab)
+ .stab          0x00000000      0xa44 ./MCAL/DIO/DIO_Program.o
+ .stab          0x00000a44      0x234 ./HAL/switch/Switch_Config.o
+                                0x240 (size before relaxing)
+ .stab          0x00000c78      0x27c ./HAL/switch/Switch_Program.o
+                                0x3b4 (size before relaxing)
+ .stab          0x00000ef4      0x2b8 ./APP/main.o
+                                0x2c4 (size before relaxing)
+
+.stabstr        0x00000000      0x814
+ *(.stabstr)
+ .stabstr       0x00000000      0x814 ./MCAL/DIO/DIO_Program.o
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment
+ *(.comment)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges
+ *(.debug_aranges)
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info
+ *(.debug_info)
+ *(.gnu.linkonce.wi.*)
+
+.debug_abbrev
+ *(.debug_abbrev)
+
+.debug_line
+ *(.debug_line)
+
+.debug_frame
+ *(.debug_frame)
+
+.debug_str
+ *(.debug_str)
+
+.debug_loc
+ *(.debug_loc)
+
+.debug_macinfo
+ *(.debug_macinfo)
+OUTPUT(Switch.elf elf32-avr)
+LOAD linker stubs
