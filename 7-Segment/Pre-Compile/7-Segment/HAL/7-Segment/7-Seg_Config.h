@@ -1,0 +1,40 @@
+/*
+ * 7-Seg_Config.h
+ *
+ *  Created on: Mar 26, 2022
+ *      Author:  Ahmed Maged
+ */
+
+#ifndef HAL_7_SEG_CONFIG_H_
+#define HAL_7_SEG_CONFIG_H_
+
+#define SEVEN_SEG_U8APIN    DIO_u8PIN0
+#define SEVEN_SEG_U8APORT   DIO_u8PORTA
+
+#define SEVEN_SEG_U8BPIN    DIO_u8PIN1
+#define SEVEN_SEG_U8BPORT   DIO_u8PORTA
+
+#define SEVEN_SEG_U8CPIN    DIO_u8PIN2
+#define SEVEN_SEG_U8CPORT   DIO_u8PORTA
+
+#define SEVEN_SEG_U8DPIN    DIO_u8PIN3
+#define SEVEN_SEG_U8DPORT   DIO_u8PORTA
+
+#define SEVEN_SEG_U8EPIN    DIO_u8PIN4
+#define SEVEN_SEG_U8EPORT   DIO_u8PORTA
+
+#define SEVEN_SEG_U8FPIN    DIO_u8PIN5
+#define SEVEN_SEG_U8FPORT   DIO_u8PORTA
+
+#define SEVEN_SEG_U8GPIN    DIO_u8PIN6
+#define SEVEN_SEG_U8GPORT   DIO_u8PORTA
+
+#define SEVEN_SEG_COM_PIN        NOT_CONNECTED
+#define SEVEN_SEG_COM_PORT       NOT_CONNECTED
+
+#define SEVEN_SEG_DOT_PIN        NOT_CONNECTED
+#define SEVEN_SEG_DOT_PORT       NOT_CONNECTED
+
+#define SEVEN_SEG_TYPE   	COMMON_ANODE
+
+#endif /* HAL_7_SEG_CONFIG_H_ */
