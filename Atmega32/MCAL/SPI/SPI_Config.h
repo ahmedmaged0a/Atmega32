@@ -24,7 +24,7 @@
 /*When this bit is written logic one the SPI speed (SCK Frequency) will be doubled when
   the SPI is in Master mode
 */
-#define DOUBLE_SPEED   Enable
+#define DOUBLE_SPEED   DISABLE
 
 
 

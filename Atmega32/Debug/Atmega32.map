@@ -166,7 +166,7 @@ LOAD d:/my world/nti material/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.
 .rela.plt
  *(.rela.plt)
 
-.text           0x00000000     0x5ec2
+.text           0x00000000     0x5eb8
  *(.vectors)
  .vectors       0x00000000       0x54 d:/my world/nti material/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
                 0x00000000                __vectors
@@ -439,25 +439,25 @@ LOAD d:/my world/nti material/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.
  .text.Seven_Segment_enuClearDisplay
                 0x000056ee      0x5bc ./HAL/7-SegmentL/7-Seg_Program.o
                 0x000056ee                Seven_Segment_enuClearDisplay
- .text.main     0x00005caa      0x158 ./APP/main.o
+ .text.main     0x00005caa      0x14e ./APP/main.o
                 0x00005caa                main
- .text.libgcc   0x00005e02       0x28 d:/my world/nti material/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
-                0x00005e02                __udivmodhi4
- .text.libgcc   0x00005e2a       0x26 d:/my world/nti material/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_divmodhi4.o)
-                0x00005e2a                __divmodhi4
-                0x00005e2a                _div
- .text.libgcc   0x00005e50        0x0 d:/my world/nti material/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
- .text.libgcc   0x00005e50        0x0 d:/my world/nti material/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
- .text.libgcc   0x00005e50        0x0 d:/my world/nti material/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
- .text.libgcc   0x00005e50       0x38 d:/my world/nti material/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_prologue.o)
-                0x00005e50                __prologue_saves__
- .text.libgcc   0x00005e88       0x36 d:/my world/nti material/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_epilogue.o)
-                0x00005e88                __epilogue_restores__
-                0x00005ebe                . = ALIGN (0x2)
+ .text.libgcc   0x00005df8       0x28 d:/my world/nti material/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
+                0x00005df8                __udivmodhi4
+ .text.libgcc   0x00005e20       0x26 d:/my world/nti material/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_divmodhi4.o)
+                0x00005e20                __divmodhi4
+                0x00005e20                _div
+ .text.libgcc   0x00005e46        0x0 d:/my world/nti material/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .text.libgcc   0x00005e46        0x0 d:/my world/nti material/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+ .text.libgcc   0x00005e46        0x0 d:/my world/nti material/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+ .text.libgcc   0x00005e46       0x38 d:/my world/nti material/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_prologue.o)
+                0x00005e46                __prologue_saves__
+ .text.libgcc   0x00005e7e       0x36 d:/my world/nti material/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_epilogue.o)
+                0x00005e7e                __epilogue_restores__
+                0x00005eb4                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x00005ebe        0x0 d:/my world/nti material/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
-                0x00005ebe                exit
-                0x00005ebe                _exit
+ .fini9         0x00005eb4        0x0 d:/my world/nti material/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+                0x00005eb4                exit
+                0x00005eb4                _exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -476,11 +476,11 @@ LOAD d:/my world/nti material/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x00005ebe        0x4 d:/my world/nti material/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .fini0         0x00005eb4        0x4 d:/my world/nti material/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
  *(.fini0)
-                0x00005ec2                _etext = .
+                0x00005eb8                _etext = .
 
-.data           0x00800060      0x174 load address 0x00005ec2
+.data           0x00800060      0x174 load address 0x00005eb8
                 0x00800060                PROVIDE (__data_start, .)
  *(.data)
  .data          0x00800060        0x0 d:/my world/nti material/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
@@ -594,8 +594,8 @@ LOAD d:/my world/nti material/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.
                 0x008001d4        0x6 ./MCAL/EXTI/EXTI_Program.o
  *(COMMON)
                 0x008001da                PROVIDE (__bss_end, .)
-                0x00005ec2                __data_load_start = LOADADDR (.data)
-                0x00006036                __data_load_end = (__data_load_start + SIZEOF (.data))
+                0x00005eb8                __data_load_start = LOADADDR (.data)
+                0x0000602c                __data_load_end = (__data_load_start + SIZEOF (.data))
 
 .noinit         0x008001da        0x0
                 0x008001da                PROVIDE (__noinit_start, .)
@@ -620,7 +620,7 @@ LOAD d:/my world/nti material/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.
 .signature
  *(.signature*)
 
-.stab           0x00000000     0x50c4
+.stab           0x00000000     0x50b8
  *(.stab)
  .stab          0x00000000      0x69c ./MCAL/USART/USART_Program.o
  .stab          0x0000069c      0x444 ./MCAL/SPI/SPI_Program.o
@@ -649,8 +649,8 @@ LOAD d:/my world/nti material/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.
                                 0x24c (size before relaxing)
  .stab          0x00004458      0x8dc ./HAL/7-SegmentL/7-Seg_Program.o
                                 0xa14 (size before relaxing)
- .stab          0x00004d34      0x390 ./APP/main.o
-                                0x528 (size before relaxing)
+ .stab          0x00004d34      0x384 ./APP/main.o
+                                0x51c (size before relaxing)
 
 .stabstr        0x00000000     0x20fc
  *(.stabstr)
