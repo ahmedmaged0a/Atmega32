@@ -10,32 +10,33 @@
 
 #include "../MCAL/DIO/DIO_interface.h"
 
-#include "../MCAL/EXTI/EXTI_Config.h"
-#include "../MCAL/EXTI/EXTI_Interface.h"
+#include "../MCAL/SPI/SPI_Config.h"
+#include "../MCAL/SPI/SPI_Interface.h"
 
+#include <util/delay.h>
 
-#include "../MCAL/GIE/GIE_Interface.h"
-
-extern EXTI_T EXTI_AstrEXTIconfig[3];
-
-void toggle(void);
 int main(void)
 {
+	u8 Local_u8DataExchange=0;
 	DIO_enuInit();
-	EXTI_enuInit(EXTI_AstrEXTIconfig);
-
+	SPI_enuInitMaster();
 	DIO_enuSetPinDirection(DIO_u8PORTA,DIO_u8PIN2,DIO_u8OUTPUT);
-	DIO_enuSetPinValue(DIO_u8PORTA,DIO_u8PIN2,DIO_u8HIGH);
 
-	DIO_enuSetPinDirection(DIO_u8PORTD,DIO_u8PIN3,DIO_u8INPUT);
-	DIO_enuSetPinValue(DIO_u8PORTD,DIO_u8PIN2,DIO_u8PULLUP);
-	EXTI_enuInit(EXTI_AstrEXTIconfig);
-	GIE_enuInit();
-	EXTI_enuCallBack(toggle,EXTI_INT1);
-	while(1);
+
+    DIO_enuSetPinDirection(DIO_u8PORTB,DIO_u8PIN4,DIO_u8INPUT);
+    DIO_enuSetPinValue(DIO_u8PORTB,DIO_u8PIN4,DIO_u8PULLUP);
+
+	DIO_enuSetPinDirection(DIO_u8PORTB,DIO_u8PIN5,DIO_u8OUTPUT);
+	DIO_enuSetPinDirection(DIO_u8PORTB,DIO_u8PIN6,DIO_u8INPUT);
+	DIO_enuSetPinDirection(DIO_u8PORTB,DIO_u8PIN7,DIO_u8OUTPUT);
+
+
+	while(1)
+	{
+
+		SPI_enuTransceive(4,&Local_u8DataExchange);
+		_delay_ms(10);
+	}
+
 	return 0;
-}
-void toggle(void)
-{
-	DIO_enuToggelPinValue(DIO_u8PORTA,DIO_u8PIN2);
 }

@@ -28,4 +28,6 @@ HAL/switch \
 MCAL/DIO \
 MCAL/EXTI \
 MCAL/GIE \
+MCAL/SPI \
+MCAL/USART \
 
