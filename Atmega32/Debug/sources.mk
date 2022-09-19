@@ -25,6 +25,7 @@ HAL/7-SegmentL \
 HAL/LCD \
 HAL/LED \
 HAL/switch \
+MCAL/ADC \
 MCAL/DIO \
 MCAL/EXTI \
 MCAL/GIE \

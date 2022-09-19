@@ -9,7 +9,11 @@
 
 #include "EXTI_Private.h"
 #include "EXTI_Config.h"
-
+/*
+* ==============================================================================================
+* 								External interrupt Pin Configuration.
+* ==============================================================================================
+*/
 EXTI_T EXTI_AstrEXTIconfig[3]=
 {
 		{INT_DEAVTIVE},          	 //INT0

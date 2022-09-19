@@ -63,6 +63,7 @@ LOAD ./MCAL/GIE/GIE_Program.o
 LOAD ./MCAL/EXTI/EXTI_Config.o
 LOAD ./MCAL/EXTI/EXTI_Program.o
 LOAD ./MCAL/DIO/DIO_Program.o
+LOAD ./MCAL/ADC/ADC_Program.o
 LOAD ./HAL/switch/Switch_Config.o
 LOAD ./HAL/switch/Switch_Program.o
 LOAD ./HAL/LED/LED_Config.o
@@ -166,7 +167,7 @@ LOAD d:/my world/nti material/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.
 .rela.plt
  *(.rela.plt)
 
-.text           0x00000000     0x5eb8
+.text           0x00000000     0x6476
  *(.vectors)
  .vectors       0x00000000       0x54 d:/my world/nti material/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
                 0x00000000                __vectors
@@ -237,7 +238,6 @@ LOAD d:/my world/nti material/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.
                 0x0000008e                __vector_8
                 0x0000008e                __vector_14
                 0x0000008e                __vector_10
-                0x0000008e                __vector_16
                 0x0000008e                __vector_18
                 0x0000008e                __vector_20
  .text          0x00000092        0x0 ./MCAL/USART/USART_Program.o
@@ -246,6 +246,7 @@ LOAD d:/my world/nti material/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.
  .text          0x00000092        0x0 ./MCAL/EXTI/EXTI_Config.o
  .text          0x00000092        0x0 ./MCAL/EXTI/EXTI_Program.o
  .text          0x00000092        0x0 ./MCAL/DIO/DIO_Program.o
+ .text          0x00000092        0x0 ./MCAL/ADC/ADC_Program.o
  .text          0x00000092        0x0 ./HAL/switch/Switch_Config.o
  .text          0x00000092        0x0 ./HAL/switch/Switch_Program.o
  .text          0x00000092        0x0 ./HAL/LED/LED_Config.o
@@ -375,89 +376,130 @@ LOAD d:/my world/nti material/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.
  .text.DIO_enuGetPinValue
                 0x00001f88      0x13c ./MCAL/DIO/DIO_Program.o
                 0x00001f88                DIO_enuGetPinValue
+ .text.ADC_enuInit
+                0x000020c4       0x78 ./MCAL/ADC/ADC_Program.o
+                0x000020c4                ADC_enuInit
+ .text.ADC_enuStartConversion
+                0x0000213c       0x28 ./MCAL/ADC/ADC_Program.o
+                0x0000213c                ADC_enuStartConversion
+ .text.ADC_enuPollingSystem
+                0x00002164       0x36 ./MCAL/ADC/ADC_Program.o
+                0x00002164                ADC_enuPollingSystem
+ .text.ADC_enuReadHighReg
+                0x0000219a       0x46 ./MCAL/ADC/ADC_Program.o
+                0x0000219a                ADC_enuReadHighReg
+ .text.ADC_enuRead
+                0x000021e0       0x58 ./MCAL/ADC/ADC_Program.o
+                0x000021e0                ADC_enuRead
+ .text.ADC_enuCallBack
+                0x00002238       0x54 ./MCAL/ADC/ADC_Program.o
+                0x00002238                ADC_enuCallBack
+ .text.ADC_enuEnable
+                0x0000228c       0x24 ./MCAL/ADC/ADC_Program.o
+                0x0000228c                ADC_enuEnable
+ .text.ADC_enuDisable
+                0x000022b0       0x24 ./MCAL/ADC/ADC_Program.o
+                0x000022b0                ADC_enuDisable
+ .text.ADC_enuSelectChannel
+                0x000022d4      0x176 ./MCAL/ADC/ADC_Program.o
+                0x000022d4                ADC_enuSelectChannel
+ .text.ADC_enuEnableTriggeringMode
+                0x0000244a      0x230 ./MCAL/ADC/ADC_Program.o
+                0x0000244a                ADC_enuEnableTriggeringMode
+ .text.ADC_enuDisableTriggeringMode
+                0x0000267a       0x24 ./MCAL/ADC/ADC_Program.o
+                0x0000267a                ADC_enuDisableTriggeringMode
+ .text.ADC_enuEnableInterruptMode
+                0x0000269e       0x24 ./MCAL/ADC/ADC_Program.o
+                0x0000269e                ADC_enuEnableInterruptMode
+ .text.__vector_16
+                0x000026c2       0x6e ./MCAL/ADC/ADC_Program.o
+                0x000026c2                __vector_16
  .text.SW_enuInit
-                0x000020c4       0xea ./HAL/switch/Switch_Program.o
-                0x000020c4                SW_enuInit
+                0x00002730       0xea ./HAL/switch/Switch_Program.o
+                0x00002730                SW_enuInit
  .text.SW_enuGetState
-                0x000021ae       0x5a ./HAL/switch/Switch_Program.o
-                0x000021ae                SW_enuGetState
+                0x0000281a       0x5a ./HAL/switch/Switch_Program.o
+                0x0000281a                SW_enuGetState
  .text.LED_enuInit
-                0x00002208      0x276 ./HAL/LED/LED_Priviliges.o
-                0x00002208                LED_enuInit
+                0x00002874      0x276 ./HAL/LED/LED_Priviliges.o
+                0x00002874                LED_enuInit
  .text.LED_enuTurnOn
-                0x0000247e      0x112 ./HAL/LED/LED_Priviliges.o
-                0x0000247e                LED_enuTurnOn
+                0x00002aea      0x112 ./HAL/LED/LED_Priviliges.o
+                0x00002aea                LED_enuTurnOn
  .text.LED_enuTurnOff
-                0x00002590      0x112 ./HAL/LED/LED_Priviliges.o
-                0x00002590                LED_enuTurnOff
+                0x00002bfc      0x112 ./HAL/LED/LED_Priviliges.o
+                0x00002bfc                LED_enuTurnOff
  .text.LED_enuGetState
-                0x000026a2       0x98 ./HAL/LED/LED_Priviliges.o
-                0x000026a2                LED_enuGetState
+                0x00002d0e       0x98 ./HAL/LED/LED_Priviliges.o
+                0x00002d0e                LED_enuGetState
  .text.LCD_enuInit
-                0x0000273a      0x822 ./HAL/LCD/LCD_Program.o
-                0x0000273a                LCD_enuInit
+                0x00002da6      0x822 ./HAL/LCD/LCD_Program.o
+                0x00002da6                LCD_enuInit
  .text.LCD_enuDisplayChar
-                0x00002f5c       0x92 ./HAL/LCD/LCD_Program.o
-                0x00002f5c                LCD_enuDisplayChar
+                0x000035c8       0x92 ./HAL/LCD/LCD_Program.o
+                0x000035c8                LCD_enuDisplayChar
  .text.LCD_enuDisplayString
-                0x00002fee       0x80 ./HAL/LCD/LCD_Program.o
-                0x00002fee                LCD_enuDisplayString
+                0x0000365a       0x80 ./HAL/LCD/LCD_Program.o
+                0x0000365a                LCD_enuDisplayString
  .text.LCD_enuDisplayInteger
-                0x0000306e      0x15c ./HAL/LCD/LCD_Program.o
-                0x0000306e                LCD_enuDisplayInteger
+                0x000036da      0x15c ./HAL/LCD/LCD_Program.o
+                0x000036da                LCD_enuDisplayInteger
  .text.LCD_enuSendCommand
-                0x000031ca       0x92 ./HAL/LCD/LCD_Program.o
-                0x000031ca                LCD_enuSendCommand
+                0x00003836       0x92 ./HAL/LCD/LCD_Program.o
+                0x00003836                LCD_enuSendCommand
  .text.LCD_enuSetPosition
-                0x0000325c      0x124 ./HAL/LCD/LCD_Program.o
-                0x0000325c                LCD_enuSetPosition
+                0x000038c8      0x124 ./HAL/LCD/LCD_Program.o
+                0x000038c8                LCD_enuSetPosition
  .text.LCD_invidSendCommand
-                0x00003380      0x70c ./HAL/LCD/LCD_Program.o
+                0x000039ec      0x70c ./HAL/LCD/LCD_Program.o
  .text.LCD_invidSendData
-                0x00003a8c      0x5ce ./HAL/LCD/LCD_Program.o
+                0x000040f8      0x5ce ./HAL/LCD/LCD_Program.o
  .text.LCD_enuDisplayFloatNum
-                0x0000405a      0x354 ./HAL/LCD/LCD_Program.o
-                0x0000405a                LCD_enuDisplayFloatNum
+                0x000046c6      0x354 ./HAL/LCD/LCD_Program.o
+                0x000046c6                LCD_enuDisplayFloatNum
  .text.Seven_Segment_enuInit
-                0x000043ae      0x4e0 ./HAL/7-SegmentL/7-Seg_Program.o
-                0x000043ae                Seven_Segment_enuInit
+                0x00004a1a      0x4e0 ./HAL/7-SegmentL/7-Seg_Program.o
+                0x00004a1a                Seven_Segment_enuInit
  .text.Seven_Segment_enuDisplayNum
-                0x0000488e      0x788 ./HAL/7-SegmentL/7-Seg_Program.o
-                0x0000488e                Seven_Segment_enuDisplayNum
+                0x00004efa      0x788 ./HAL/7-SegmentL/7-Seg_Program.o
+                0x00004efa                Seven_Segment_enuDisplayNum
  .text.Seven_Segment_enuEnableCommon
-                0x00005016      0x1b6 ./HAL/7-SegmentL/7-Seg_Program.o
-                0x00005016                Seven_Segment_enuEnableCommon
+                0x00005682      0x1b6 ./HAL/7-SegmentL/7-Seg_Program.o
+                0x00005682                Seven_Segment_enuEnableCommon
  .text.Seven_Segment_enuDisableCommon
-                0x000051cc      0x1b6 ./HAL/7-SegmentL/7-Seg_Program.o
-                0x000051cc                Seven_Segment_enuDisableCommon
+                0x00005838      0x1b6 ./HAL/7-SegmentL/7-Seg_Program.o
+                0x00005838                Seven_Segment_enuDisableCommon
  .text.Seven_Segment_enuEnableDot
-                0x00005382      0x1b6 ./HAL/7-SegmentL/7-Seg_Program.o
-                0x00005382                Seven_Segment_enuEnableDot
+                0x000059ee      0x1b6 ./HAL/7-SegmentL/7-Seg_Program.o
+                0x000059ee                Seven_Segment_enuEnableDot
  .text.Seven_Segment_enuDisableDot
-                0x00005538      0x1b6 ./HAL/7-SegmentL/7-Seg_Program.o
-                0x00005538                Seven_Segment_enuDisableDot
+                0x00005ba4      0x1b6 ./HAL/7-SegmentL/7-Seg_Program.o
+                0x00005ba4                Seven_Segment_enuDisableDot
  .text.Seven_Segment_enuClearDisplay
-                0x000056ee      0x5bc ./HAL/7-SegmentL/7-Seg_Program.o
-                0x000056ee                Seven_Segment_enuClearDisplay
- .text.main     0x00005caa      0x14e ./APP/main.o
-                0x00005caa                main
- .text.libgcc   0x00005df8       0x28 d:/my world/nti material/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
-                0x00005df8                __udivmodhi4
- .text.libgcc   0x00005e20       0x26 d:/my world/nti material/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_divmodhi4.o)
-                0x00005e20                __divmodhi4
-                0x00005e20                _div
- .text.libgcc   0x00005e46        0x0 d:/my world/nti material/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
- .text.libgcc   0x00005e46        0x0 d:/my world/nti material/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
- .text.libgcc   0x00005e46        0x0 d:/my world/nti material/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
- .text.libgcc   0x00005e46       0x38 d:/my world/nti material/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_prologue.o)
-                0x00005e46                __prologue_saves__
- .text.libgcc   0x00005e7e       0x36 d:/my world/nti material/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_epilogue.o)
-                0x00005e7e                __epilogue_restores__
-                0x00005eb4                . = ALIGN (0x2)
+                0x00005d5a      0x5bc ./HAL/7-SegmentL/7-Seg_Program.o
+                0x00005d5a                Seven_Segment_enuClearDisplay
+ .text.read     0x00006316       0x20 ./APP/main.o
+                0x00006316                read
+ .text.main     0x00006336       0x80 ./APP/main.o
+                0x00006336                main
+ .text.libgcc   0x000063b6       0x28 d:/my world/nti material/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
+                0x000063b6                __udivmodhi4
+ .text.libgcc   0x000063de       0x26 d:/my world/nti material/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_divmodhi4.o)
+                0x000063de                __divmodhi4
+                0x000063de                _div
+ .text.libgcc   0x00006404        0x0 d:/my world/nti material/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .text.libgcc   0x00006404        0x0 d:/my world/nti material/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+ .text.libgcc   0x00006404        0x0 d:/my world/nti material/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+ .text.libgcc   0x00006404       0x38 d:/my world/nti material/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_prologue.o)
+                0x00006404                __prologue_saves__
+ .text.libgcc   0x0000643c       0x36 d:/my world/nti material/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_epilogue.o)
+                0x0000643c                __epilogue_restores__
+                0x00006472                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x00005eb4        0x0 d:/my world/nti material/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
-                0x00005eb4                exit
-                0x00005eb4                _exit
+ .fini9         0x00006472        0x0 d:/my world/nti material/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+                0x00006472                exit
+                0x00006472                _exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -476,11 +518,11 @@ LOAD d:/my world/nti material/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x00005eb4        0x4 d:/my world/nti material/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .fini0         0x00006472        0x4 d:/my world/nti material/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
  *(.fini0)
-                0x00005eb8                _etext = .
+                0x00006476                _etext = .
 
-.data           0x00800060      0x174 load address 0x00005eb8
+.data           0x00800060      0x174 load address 0x00006476
                 0x00800060                PROVIDE (__data_start, .)
  *(.data)
  .data          0x00800060        0x0 d:/my world/nti material/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
@@ -490,6 +532,7 @@ LOAD d:/my world/nti material/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.
  .data          0x00800060        0x0 ./MCAL/EXTI/EXTI_Config.o
  .data          0x00800060        0x0 ./MCAL/EXTI/EXTI_Program.o
  .data          0x00800060        0x0 ./MCAL/DIO/DIO_Program.o
+ .data          0x00800060        0x0 ./MCAL/ADC/ADC_Program.o
  .data          0x00800060        0x0 ./HAL/switch/Switch_Config.o
  .data          0x00800060        0x0 ./HAL/switch/Switch_Program.o
  .data          0x00800060        0x0 ./HAL/LED/LED_Config.o
@@ -549,7 +592,7 @@ LOAD d:/my world/nti material/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.
                 0x008001d4                _edata = .
                 0x008001d4                PROVIDE (__data_end, .)
 
-.bss            0x008001d4        0x6
+.bss            0x008001d4        0xa
                 0x008001d4                PROVIDE (__bss_start, .)
  *(.bss)
  .bss           0x008001d4        0x0 d:/my world/nti material/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
@@ -559,6 +602,7 @@ LOAD d:/my world/nti material/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.
  .bss           0x008001d4        0x0 ./MCAL/EXTI/EXTI_Config.o
  .bss           0x008001d4        0x0 ./MCAL/EXTI/EXTI_Program.o
  .bss           0x008001d4        0x0 ./MCAL/DIO/DIO_Program.o
+ .bss           0x008001d4        0x0 ./MCAL/ADC/ADC_Program.o
  .bss           0x008001d4        0x0 ./HAL/switch/Switch_Config.o
  .bss           0x008001d4        0x0 ./HAL/switch/Switch_Program.o
  .bss           0x008001d4        0x0 ./HAL/LED/LED_Config.o
@@ -592,17 +636,21 @@ LOAD d:/my world/nti material/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.
  *(.bss*)
  .bss.EXTI_ApfunINTFun
                 0x008001d4        0x6 ./MCAL/EXTI/EXTI_Program.o
+ .bss.ADC_pFunISRfun
+                0x008001da        0x2 ./MCAL/ADC/ADC_Program.o
+ .bss.ADC_pFunISRparam
+                0x008001dc        0x2 ./MCAL/ADC/ADC_Program.o
  *(COMMON)
-                0x008001da                PROVIDE (__bss_end, .)
-                0x00005eb8                __data_load_start = LOADADDR (.data)
-                0x0000602c                __data_load_end = (__data_load_start + SIZEOF (.data))
+                0x008001de                PROVIDE (__bss_end, .)
+                0x00006476                __data_load_start = LOADADDR (.data)
+                0x000065ea                __data_load_end = (__data_load_start + SIZEOF (.data))
 
-.noinit         0x008001da        0x0
-                0x008001da                PROVIDE (__noinit_start, .)
+.noinit         0x008001de        0x0
+                0x008001de                PROVIDE (__noinit_start, .)
  *(.noinit*)
-                0x008001da                PROVIDE (__noinit_end, .)
-                0x008001da                _end = .
-                0x008001da                PROVIDE (__heap_start, .)
+                0x008001de                PROVIDE (__noinit_end, .)
+                0x008001de                _end = .
+                0x008001de                PROVIDE (__heap_start, .)
 
 .eeprom         0x00810000        0x0
  *(.eeprom*)
@@ -620,7 +668,7 @@ LOAD d:/my world/nti material/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.
 .signature
  *(.signature*)
 
-.stab           0x00000000     0x50b8
+.stab           0x00000000     0x5bd4
  *(.stab)
  .stab          0x00000000      0x69c ./MCAL/USART/USART_Program.o
  .stab          0x0000069c      0x444 ./MCAL/SPI/SPI_Program.o
@@ -633,28 +681,30 @@ LOAD d:/my world/nti material/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.
                                 0x990 (size before relaxing)
  .stab          0x00001800      0xa38 ./MCAL/DIO/DIO_Program.o
                                 0xa44 (size before relaxing)
- .stab          0x00002238      0x234 ./HAL/switch/Switch_Config.o
+ .stab          0x00002238      0xb1c ./MCAL/ADC/ADC_Program.o
+                                0xb28 (size before relaxing)
+ .stab          0x00002d54      0x234 ./HAL/switch/Switch_Config.o
                                 0x240 (size before relaxing)
- .stab          0x0000246c      0x27c ./HAL/switch/Switch_Program.o
+ .stab          0x00002f88      0x27c ./HAL/switch/Switch_Program.o
                                 0x3b4 (size before relaxing)
- .stab          0x000026e8      0x234 ./HAL/LED/LED_Config.o
+ .stab          0x00003204      0x234 ./HAL/LED/LED_Config.o
                                 0x240 (size before relaxing)
- .stab          0x0000291c      0x4f8 ./HAL/LED/LED_Priviliges.o
+ .stab          0x00003438      0x4f8 ./HAL/LED/LED_Priviliges.o
                                 0x630 (size before relaxing)
- .stab          0x00002e14      0x234 ./HAL/LCD/LCD_Config.o
+ .stab          0x00003930      0x234 ./HAL/LCD/LCD_Config.o
                                 0x240 (size before relaxing)
- .stab          0x00003048     0x11d0 ./HAL/LCD/LCD_Program.o
+ .stab          0x00003b64     0x11d0 ./HAL/LCD/LCD_Program.o
                                0x1308 (size before relaxing)
- .stab          0x00004218      0x240 ./HAL/7-SegmentL/7-Seg_Config.o
+ .stab          0x00004d34      0x240 ./HAL/7-SegmentL/7-Seg_Config.o
                                 0x24c (size before relaxing)
- .stab          0x00004458      0x8dc ./HAL/7-SegmentL/7-Seg_Program.o
+ .stab          0x00004f74      0x8dc ./HAL/7-SegmentL/7-Seg_Program.o
                                 0xa14 (size before relaxing)
- .stab          0x00004d34      0x384 ./APP/main.o
+ .stab          0x00005850      0x384 ./APP/main.o
                                 0x51c (size before relaxing)
 
-.stabstr        0x00000000     0x20fc
+.stabstr        0x00000000     0x23cd
  *(.stabstr)
- .stabstr       0x00000000     0x20fc ./MCAL/USART/USART_Program.o
+ .stabstr       0x00000000     0x23cd ./MCAL/USART/USART_Program.o
 
 .stab.excl
  *(.stab.excl)
